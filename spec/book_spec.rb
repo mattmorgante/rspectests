@@ -1,4 +1,4 @@
-require './spec_helper'
+require 'spec_helper'
 
 describe Book do 
   before :each do 
@@ -10,6 +10,10 @@ describe Book do
       @book.should be_an_instance_of Book
     end 
 
+    it "takes three params and returns a book object" do 
+      book = Book.new "Title", "Author"
+      book.should_not be_an_instance_of Book
+    end 
   end 
-  
+
 end 
